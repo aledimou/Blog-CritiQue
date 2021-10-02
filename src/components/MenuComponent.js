@@ -1,15 +1,25 @@
 import React from "react"
 import { Navbar, Container, Nav } from "react-bootstrap";
+import {Link} from "react-router-dom"
+
+
+const LinkStyle = {
+    margin: "10px 9px",
+    textDecoration: "none",
+    color: "#F6F6F6",
+    fontSize:"1.1rem"
+}
 
 function Menu(){
     return (
     <Navbar bg="dark" variant="dark">
         <Container fluid>
-        <Navbar.Brand href="#home">CritiQue</Navbar.Brand>
+        <Navbar.Brand href="#home">CritiQueBlog</Navbar.Brand>
         <Nav className="me-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#features">Features</Nav.Link>
-        <Nav.Link href="#pricing">Pricing</Nav.Link>
+        <Link style={LinkStyle} to= "/">Home</Link>
+        <Link style={LinkStyle} to ="/Movies"> Movies</Link>
+        <Link style={LinkStyle} to="/Cars">Cars</Link>
+        <Link style={LinkStyle} to="/Animals">Animals</Link>
         </Nav>
         </Container>
   </Navbar>

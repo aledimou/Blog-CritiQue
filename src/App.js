@@ -1,13 +1,25 @@
 import './App.css';
 import Menu from "./components/MenuComponent"
 import Home from "./components/BlogPages/Home"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Movies from "./components/BlogPages/Movies"
+import Cars from "./components/BlogPages/Cars"
+import Animals from "./components/BlogPages/Animals"
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+    <Router>
+    <header header className="App-header">
       <Menu />
       </header>
-      <Home />
+      
+      <Switch>
+        <Route path= "/" exact component= {Home}/>
+        <Route path = "/Movies" exact component= {Movies}/>
+        <Route path= "/Cars" exact component= {Cars} />
+        <Route path= "/Animals" exact component= {Animals}/>
+      </Switch>
+    </Router>
     </div>
   );
 }
