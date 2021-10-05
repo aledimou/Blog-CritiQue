@@ -20,6 +20,7 @@ function Menu(){
         <Link style={LinkStyle} to ="/Movies"> Movies</Link>
         <Link style={LinkStyle} to="/Cars">Cars</Link>
         <Link style={LinkStyle} to="/Animals">Animals</Link>
+        <Link style={LinkStyle} to="/Editor">Editor</Link>
         </Nav>
         </Container>
   </Navbar>
